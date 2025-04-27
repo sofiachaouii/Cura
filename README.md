@@ -1,9 +1,10 @@
-# Cura - Feedback Platform Backend
+# Cura - Feedback Platform
 
-A FastAPI-based backend for a feedback platform that helps teachers provide AI-generated feedback on student submissions.
+A comprehensive feedback platform that helps teachers provide AI-generated feedback on student submissions, with weekly values statements and student-teacher assignment management.
 
 ## Features
 
+### Backend (FastAPI)
 - User Authentication (Teachers and Students)
 - Document Upload (PDF, DOCX, TXT)
 - AI-powered Feedback Generation
@@ -12,14 +13,74 @@ A FastAPI-based backend for a feedback platform that helps teachers provide AI-g
 - Weekly Values Statements for Students
 - Student-Teacher Assignment Management
 
+### Frontend (React)
+- User Authentication (Teachers and Students)
+- Document Upload and Management
+- AI-powered Feedback Viewing and Interaction
+- Weekly Values Statements for Students
+- Student-Teacher Assignment Management
+- Responsive Design
+
 ## Prerequisites
 
 - Python 3.8+
+- Node.js 16+
+- npm or yarn
 - Supabase Account
 - OpenAI API Key
 - Git
 
+## Project Structure
+
+```
+cura/
+├── app/                      # Backend FastAPI application
+│   ├── core/
+│   │   └── config.py
+│   ├── routes/
+│   │   ├── auth.py
+│   │   ├── upload.py
+│   │   ├── feedback.py
+│   │   ├── teacher.py
+│   │   ├── assignments.py
+│   │   └── values.py
+│   ├── utils/
+│   │   ├── file_processor.py
+│   │   ├── openai_client.py
+│   │   ├── jwt_handler.py
+│   │   └── rbac.py
+│   ├── models.py
+│   └── main.py
+├── Cura_FrontEnd/            # Frontend React application
+│   ├── public/
+│   │   └── assets/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── stores/
+│   │   ├── types/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── index.css
+│   ├── .env
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── vite.config.js
+├── tests/
+│   └── test_api.py
+├── uploads/
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
+
 ## Setup
+
+### Backend Setup
 
 1. Clone the repository:
 ```bash
@@ -107,14 +168,40 @@ INSERT INTO value_statements (text) VALUES
 ('Social media has more negative than positive effects on society.');
 ```
 
-## Running the Application
-
-1. Start the FastAPI server:
+7. Start the FastAPI server:
 ```bash
 uvicorn app.main:app --reload
 ```
 
-2. Access the API documentation at `http://localhost:8000/docs`
+8. Access the API documentation at `http://localhost:8000/docs`
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+```bash
+cd Cura_FrontEnd
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env` file in the frontend directory with the following variables:
+```
+VITE_API_URL=http://localhost:8000
+```
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+5. Open your browser and navigate to `http://localhost:3000`
 
 ## API Endpoints
 
@@ -145,38 +232,27 @@ uvicorn app.main:app --reload
 
 ## Testing
 
-Run the tests using pytest:
+Run the backend tests using pytest:
 ```bash
 pytest
 ```
 
-## Project Structure
+## Building for Production
 
+### Backend
+The backend is a FastAPI application that can be deployed to any Python-compatible hosting service.
+
+### Frontend
+To build the frontend for production:
+
+```bash
+cd Cura_FrontEnd
+npm run build
+# or
+yarn build
 ```
-cura/
-├── app/
-│   ├── core/
-│   │   └── config.py
-│   ├── routes/
-│   │   ├── auth.py
-│   │   ├── upload.py
-│   │   ├── feedback.py
-│   │   ├── teacher.py
-│   │   ├── assignments.py
-│   │   └── values.py
-│   ├── utils/
-│   │   ├── file_processor.py
-│   │   ├── openai_client.py
-│   │   ├── jwt_handler.py
-│   │   └── rbac.py
-│   ├── models.py
-│   └── main.py
-├── tests/
-│   └── test_api.py
-├── uploads/
-├── requirements.txt
-└── README.md
-```
+
+The built files will be in the `dist` directory.
 
 ## Contributing
 
@@ -188,4 +264,7 @@ cura/
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Acknowledgments
+This project was developed as part of a Boston University class project. The development process included assistance from AI tools (Claude 3.5 Sonnet) for code generation and implementation guidance. While the AI provided assistance, the overall architecture, design decisions, and implementation were done by the author.
