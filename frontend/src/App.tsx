@@ -1,7 +1,7 @@
 // src/App.tsx
 // src/App.tsx
 
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom' 
 
 import Layout           from './components/Layout'
 import PrivateRoute     from './components/PrivateRoute'
