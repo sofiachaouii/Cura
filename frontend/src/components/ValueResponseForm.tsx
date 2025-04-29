@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import type { ValueStatement } from '../types'
-
+ 
 interface ValueResponseFormProps {
   statement: ValueStatement
   stance: 'for' | 'against'
