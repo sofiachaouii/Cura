@@ -1,6 +1,6 @@
 import pdfplumber
 from docx import Document
-from typing import Optional
+from typing import Optional 
 
 def extract_text_from_file(file_path: str, content_type: str) -> str:
     """
