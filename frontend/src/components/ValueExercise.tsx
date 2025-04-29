@@ -4,7 +4,7 @@ import { student } from '../services/api'
 import type { ValueStatement, ValueReflection as ValueReflectionType } from '../types'
 import ValueStatementCard from './ValueStatementCard'
 import ValueResponseForm from './ValueResponseForm'
-import ValueReflection from './ValueReflection'
+import ValueReflection from './ValueReflection' 
 
 export default function ValueExercise() {
   const [selectedStance, setSelectedStance] = useState<'for' | 'against' | null>(null)
