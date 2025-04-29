@@ -4,7 +4,7 @@ from app.utils.rbac import require_teacher
 from supabase import create_client, Client
 from app.core.config import settings
 import logging
-
+ 
 router = APIRouter()
 supabase: Client = create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)
 logger = logging.getLogger(__name__)
