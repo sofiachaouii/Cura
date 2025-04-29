@@ -15,7 +15,7 @@ class Settings(BaseSettings):
         "http://localhost:5173",  # Vite default port
         "http://127.0.0.1:5173"   # Vite default port
     ]  # Allow both development ports and IP variants
-    
+
     # Supabase Configuration
     SUPABASE_URL: str
     SUPABASE_KEY: str
