@@ -6,7 +6,7 @@ interface ValueStatementCardProps {
   onSelectStance: (stance: 'for' | 'against') => void
 }
 
-export default function ValueStatementCard({
+export default function ValueStatementCard({ 
   statement,
   onSelectStance,
 }: ValueStatementCardProps) {
