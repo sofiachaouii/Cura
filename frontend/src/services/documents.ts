@@ -13,3 +13,4 @@ export async function uploadDocument(file: File) {
 
   return response.data
 }
+ 
