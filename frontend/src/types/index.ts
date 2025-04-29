@@ -1,4 +1,4 @@
-// src/types/index.ts
+// src/types/index.ts 
 import { FormEvent } from 'react'
 
 export type FormSubmitEvent = FormEvent<HTMLFormElement>
