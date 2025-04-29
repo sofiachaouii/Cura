@@ -4,7 +4,7 @@ import { useAuthStore } from '../stores/authStore'
 import { LogOut, Upload, MessageSquare, Book } from 'lucide-react'
 import Logo from './Logo'
 
-interface LayoutProps {
+interface LayoutProps { 
   children: any;
 }
 
