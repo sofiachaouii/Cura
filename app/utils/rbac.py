@@ -3,7 +3,7 @@ from fastapi import HTTPException, Depends
 from typing import List, Optional, Callable
 from app.routes.auth import get_current_user
 from app.models import User
-import logging
+import logging 
 
 logger = logging.getLogger(__name__)
 
