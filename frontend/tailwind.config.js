@@ -6,7 +6,7 @@ module.exports = {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
+  theme: { 
     extend: {
       colors: {
         gray,                   // keeps your bg-gray-50, etc.
