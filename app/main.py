@@ -9,7 +9,6 @@ app = FastAPI(
     description="A feedback platform API for teachers and students",
     version="1.0.0"
 )
-
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
