@@ -19,4 +19,4 @@ export default function ValueReflection({ reflection }: ValueReflectionProps) {
       </div>
     </div>
   )
-} 
+}  
