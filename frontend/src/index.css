@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Merge everything into one components layer block */
+/* Merge everything into one components layer block */ 
 @layer components {
   .input {
     @apply block w-full rounded-md border-gray-300 shadow-sm
