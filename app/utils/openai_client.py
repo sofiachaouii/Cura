@@ -3,7 +3,7 @@ from openai import OpenAI
 from app.core.config import settings
 from starlette.concurrency import run_in_threadpool
 from typing import Optional
-
+ 
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
 async def generate_feedback(
