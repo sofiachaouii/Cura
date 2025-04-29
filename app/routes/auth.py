@@ -1,5 +1,4 @@
 # app/routes/auth.py
-
 from fastapi import APIRouter, HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from supabase import create_client, Client
